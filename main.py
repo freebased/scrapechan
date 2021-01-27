@@ -6,7 +6,18 @@ import webbrowser
 import requests
 from urllib.request import urlopen
 import shutil
+from shutil import copyfile
 from bs4 import BeautifulSoup
+
+
+src = "main.py"
+dst = "/usr/local/bin/scrape"
+if os.geteuid()==0:
+    if os.path.isfile('/usr/local/bin/scrape'):
+        print("File exists!")
+    else:
+        copyfile(src, dst)
+        os.chmod(dst, 0o755)
 
 img = "./img/"
 
