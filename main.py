@@ -46,13 +46,15 @@ except OSError:
 else:
     print("Successfully created the %s directory!" % board)
 
-boards_list = ["a", "c", "g", "k", "m", "o", "p", "v",
-               "vg", "vr", "w", "vip", "qa", "cm", "lgbt",
-               "3", "adv", "an", "asp", "biz", "cgl", "ck",
-               "co", "diy", "fa", "fit", "gd", "his",
-               "int", "jp", "lit", "mlp", "mu", "n", "news",
-               "out", "po", "qst", "sci", "sp", "tg",
-               "toy", "trv", "tv", "vp", "wsg", "wsr", "x"]
+boards_list =  ["a", "c", "w", "m", "cgl", "cm", "f", "n", "jp"
+                "v", "vg", "vm", "vmg", "vp", "vr", "vrpg", "vst",
+                "co", "g", "tv", "k", "o", "an", "tg", "sp", "asp",
+                "sci", "his", "int", "out", "toy",
+                "i", "po", "p", "ck", "ic", "wg", "lit", "mu", "fa",
+                "3", "gd", "diy", "wsg", "qst",
+                "biz", "trv", "fit", "x", "adv", "lgbt", "mlp", "news", "wsr", "vip",
+                "b", "r9k", "pol", "bant", "soc", "s4s",
+                "s", "hc", "hm", "h", "e", "u", "d", "y", "t", "hr", "gif", "aco", "r"]
 
 # Checking for board and thread values
 while True:
