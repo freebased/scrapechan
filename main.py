@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import os
+import ssl
+import urllib.request
 import argparse
 import webbrowser
 import requests
@@ -9,6 +11,10 @@ import shutil
 from shutil import copyfile
 from bs4 import BeautifulSoup
 
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
 src = "main.py"
 dst = "/usr/local/bin/scrape"
@@ -82,6 +88,7 @@ else:
 
 # Making url request
 url = "boards.4channel.org/" + board + "/thread/" + thread
+html = urllib.request.urlopen("https://" + url, context=ctx).read()
 response = requests.get("https://" + url)
 
 # Finding all links with "fileThumb" class
